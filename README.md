@@ -1,141 +1,125 @@
-# Project Title
+# 백화점 애완 시설 예약 시스템, The pet
 
-<!--배지-->
-![MIT License][license-shield] ![Repository Size][repository-size-shield] ![Issue Closed][issue-closed-shield]
+<!-- 목차 -->
+<details>
+  <summary>목차</summary>
+  <ol>
+    <li>
+        <a href="#1-프로젝트-소개">프로젝트 소개</a>
+        <ul>
+            <li>1) 프로젝트 주제</li>
+            <li>2) 서비스 개요 및 배경</li>
+            <li>3) 서비스 목표</li>
+        </ul>
+    </li>
+    <li>
+        <a href="#2-서비스-기능-소개">서비스 기능 소개</a>
+        <ul>
+            <li>1) 메인 기능</li>
+            <li>2) 서브 기능</li>
+            <li>3) 관련 문서</li>
+        </ul>
+    </li>
+    <li>
+        <a href="#3-사용된-데이터셋과-기술스택">사용된 데이터셋과 기술스택</a>
+        <ul>
+            <li>1) 어떤 데이터셋을 어떻게 전처리하고 사용할것인지</li>
+            <li>2) 어떤 방법, 라이브러리나 알고리즘을 사용할것인지</li>
+        </ul>
+    </li>
+    <li>
+        <a href="#4-시스템-아키텍쳐">시스템 아키텍쳐</a>
+        <ul>
+            <li>1) 개발 구조</li>
+        </ul>
+    </li>
+    <li><a href="#5-프로젝트-팀원-소개">프로젝트 팀원 소개</a></li>
+  </ol>
+</details>
 
-<!--프로젝트 대문 이미지-->
-![Project Title](img/project-title.png)
+<h2 id="1-프로젝트-소개">1. 프로젝트 소개</h2>
 
-<!--프로젝트 버튼-->
- [![Readme in English][readme-eng-shield]][readme-eng-url] [![View Demo][view-demo-shield]][view-demo-url] [![Report bug][report-bug-shield]][report-bug-url] [![Request feature][request-feature-shield]][request-feature-url]
+---
+### 1-1) 프로젝트 주제
+‘Hyunfit’은 건강의 중요성을 인식하고 있지만 건강 관리를 하지 못하고 있는 임직원들을 위해, 회사에서 건강한 사내 운동 문화를 만들어 임직원들의 건강 관리에 도움을 주는 사내 헬스케어 웹 서비스이다. 
 
-<!--목차-->
-# Table of Contents
-- [[1] About the Project](#1-about-the-project)
-  - [Features](#features)
-  - [Technologies](#technologies)
-- [[2] Getting Started](#2-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-- [[3] Usage](#3-usage)
-- [[4] Contribution](#4-contribution)
-- [[5] Acknowledgement](#5-acknowledgement)
-- [[6] Contact](#6-contact)
-- [[7] License](#7-license)
+### 1-2) 서비스 개요 및 배경
+다수의 직장인들은 운동을 하고 싶지만 어떻게 시작해야 할지 모르고 시간적 여유가 부족한 경우가 많다. 이에 ‘Hyunfit’은 집에서도 편리하게 운동을 시작할 수 있도록 홈 트레이닝 환경을 제공하여 시간적 여유가 없는 직장인들에게 도움을 준다. AI 모션 인식 기술을 활용하여 사용자의 운동 자세를 교정하고, 화상 채팅 클래스와 전문가의 지도를 통해 더 나은 운동 경험을 제공한다. 또한 운동 기록을 분석한 리포트를 제공하여 사용자의 운동 성과에 대해서 가시적으로 확인할 수 있으며, 시간을 효과적으로 활용할 수 있게 지원한다.
 
+### 1-3) 서비스 목표
+‘Hyunfit’을 통해서 사내에서 임직원들이 건강한 라이프 스타일을 추구할 수 있도록 환경을 제공할 수 있게 도와주는 웹 서비스이다
 
+* 주 사용자 : 사내 임직원, 사내 관리자, 헬스 트레이너
 
-# [1] About the Project
-*다음 내용을 고려하여 프로젝트에 대한 **전반적인 정보**를 적으세요.*
+<h2 id="2-서비스-기능-소개">2. 서비스 기능 소개</h2>
 
-- ❗️짧은❗️ 도입부/제작 동기
-- 무슨 프로젝트인지
-- 왜 이 프로젝트를 사용해야하는지
+---
 
-## Features
-*강조하고 싶은 **주요 기능**이나 **차별성 있는 특징**을 적으세요.*
-- 최고 멋진 **README**를 쉽게 작성할 수 있도록 *이텔릭체*로 된 **가이드**를 제공
-- 뱃지로 **언어 옵션**을 제공
+### 2-1) 메인 기능
+* AI 트레이닝
+  * '테스트 - 워밍업 - 가이드 - 본 운동 - 종료' 5단계로 트레이닝 구성
+  * 테스트: 자세를 제대로 인식할 수 있게 조정하는 단계
+  * 워밍업: 본 운동이 들어가기 전에 스스로 카메라를 보며 몸을 풀 수 있는 단계
+  * 가이드: 이번 운동의 자세가 미리 나오면서 사용자들이 자세를 익힐 수 있게 도움을 주는 단계
+  * 본 운동: 운동을 실제로 진행하며, 제대로 된 자세로 진행할 때마다 갯수가 올라간다. 자세가 올바르지 않으며 갯수가 올라가지 않는다.
+  * 종료: 모든 운동이 끝나고 나서 메인 화면, 리포트 화면으로 갈 수 있게 해주는 화면이 나온다.
+* 트레이너와 화상 클래스
+  * 먼저 트레이너가 예약된 클래스에 세션을 열면, 화상 클래스가 시작된다.
+  * 세션이 열리면 사용자가 들어가서 트레이너와 같이 화상 클래스를 진행한다.
+* GPT를 활용한 트레이너 피드백 작성
+  * 지금까지 회원의 특징, 자세와 같은 특징들을 템플릿화하여 GPT에게 초안을 작성하게 만든다.
+  * 트레이너가 많은 사용자들의 피드백 관리를 보다 용이하게 관리할 수록 돕는다.
 
-## Technologies
-***언어, 프레임워크, 주요 라이브러리**를 **버전**과 함께 나열하세요.*
-
-- [Maven](https://maven.apache.org/) 3.6.3
-- [MySQL](https://www.mysql.com/) 8.0
-- [Spring](https://spring.io/) 2.4.3
-
-
-
-# [2] Getting Started
-*만약 운영체제에 따라 프로그램을 다르게 동작시켜야한다면, 운영체제별로 동작 방법을 설명하세요*
-
-## Prerequisites
-*프로젝트를 동작시키기 위해 필요한 소프트웨어와 라이브러리를 나열하고 어떻게 다운받을 수 있는지 설명하세요.*
-
-- [OpenWeather API key](https://openweathermap.org/) (무료)
-- npm
-```bash
-npm install npm@latest -g
-```
-
-## Installation
-*어떻게 이 프로젝트의 소스코드를 다운받을 수 있는지 설명하세요.*
-1. Repository 클론
-```bash
-git clone https://github.com/your-username/project-repository
-```
-2. NPM packages 설치
-```bash
-npm install
-```
-
-## Configuration
-*코드의 어느 부분을 채우거나 수정해야하는지 설명하세요.*
-- `config.js`에 Openweather API key를 입력
-```bash
-const API_KEY = "<Your API key>";
-```
-
-
-
-# [3] Usage
-***스크린샷, 코드** 등을 통해 **사용 방법**과 **사용 예제**를 보여주세요. 사용 예제별로 h2 헤더로 나누어 설명할 수 있습니다.*
-
-![usage](img/usage.png)
-
-```java
-// 몇 개의 API 사용 예제를 코드와 함께 보여주세요.
-```
-
-
-
-# [4] Contribution
-기여해주신 모든 분들께 대단히 감사드립니다.[`contributing guide`][contribution-url]를 참고해주세요.
-이 프로젝트의 기여하신 분들을 소개합니다! 🙆‍♀️
-*이모티콘 쓰는 것을 좋아한다면, 버그 수정에 🐞, 아이디어 제공에 💡, 새로운 기능 구현에 ✨를 사용할 수 있습니다.*
-- 🐞 [dev-ujin](https://github.com/dev-ujin): 메인페이지 버그 수정
+### 2-2) 서브 기능
+* 사용자 설문 조사
+  * 사용자의 운동 성향을 미리 파악할 수 있다.
+  * 해당 설문 조사 결과를 토대로 메인 화면에 적합한 운동 클래스를 추천해준다.
+* 트레이닝 프로그램 등록 및 진행
+  * 트레이닝 클래스를 이름을 통해 검색할 수 있으며 클릭 시, 상세 정보를 확인할 수 있다.
+  * 트레이너가 본인 회원을 위해 클래스를 직접 만들어서 등록할 수 있다.
+* 트레이닝 클래스 사용
+  * 트레이너를 검색하고 확인할 수 있다.
+  * 클래스 종류, 트레이너 성별, 추천 순, 평점 순, 리뷰 많은 순으로 필터링할 수 있다.
+  * 클래스를 시간별로 예약할 수 있다.
+  * 화상 클래스 종료 후, 수업에 대한 리뷰를 남길 수 있다.
+* 리포트 페이지
+  * AI 트레이닝을 통해 진행한 운동에 대해서 리포트를 확인할 수 있다.
+  * 칼로리, 출석, 소모시간 등을 확인할 수 있다.
+  * 어떤 부위를 집중적으로 진행했는지 그래프를 통해 가시적으로 확인할 수 있다.
+ 
 
 
+### 2-3) 관련 문서
+- 와이어프레임
+  [Hyunfit 피그마](https://www.figma.com/file/b4NubgulfrQrZIOLGjORIF/main?type=design&mode=design&t=caeUlW5rehL6syGF-0)
 
-# [5] Acknowledgement
-***유사한 프로젝트의 레포지토리** 혹은 **블로그 포스트** 등 프로젝트 구현에 영감을 준 출처에 대해 링크를 나열하세요.*
+<h2 id="3-사용된-데이터셋과-기술스택">3. 사용된 데이터셋과 기술스택</h2>
 
-- [Readme Template - Embedded Artistry](https://embeddedartistry.com/blog/2017/11/30/embedded-artistry-readme-template/)
-- [How to write a kickass Readme - James.Scott](https://dev.to/scottydocs/how-to-write-a-kickass-readme-5af9)
-- [Best-README-Template - othneildrew](https://github.com/othneildrew/Best-README-Template#prerequisites)
-- [Img Shields](https://shields.io/)
-- [Github Pages](https://pages.github.com/)
+### 3-1) ERD
+![erd](https://github.com/user-attachments/assets/6d06a76a-8c4b-44b7-87d3-261c0d5942db)
 
+### 3-2) 기술 스택
 
-
-# [6] Contact
-- 📧 dev.ujin518@gmail.com
-- 📋 [https://dev-ujin.github.io/contact](https://dev-ujin.github.io/contact)
+| 파트                         | 기술                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Team** :metal:             | ![image](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) ![image](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white) ![image](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white) ![image](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) ![image](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)                                                                                                                                                                                                                                                                                                                                                         |
+| **FE** :ok_hand:             | ![image](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white) ![image](https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=white) ![image](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![image](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white) |
+| **BE** :raised_back_of_hand: | ![image](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white) ![image](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white) |
+| **DB** :raised_back_of_hand: | ![image](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)|
+| **DIST** :raised_back_of_hand: | ![image](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![image](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white) ![image](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white) |
 
 
 
-# [7] License
-MIT 라이센스
-라이센스에 대한 정보는 [`LICENSE`][license-url]에 있습니다.
+<h2 id="4-시스템-아키텍쳐">4. 시스템 아키텍쳐</h2>
 
+### 4-1) 개발 구조
+![image](https://github.com/user-attachments/assets/ab473883-cf72-4f76-aa6c-d8793007a020)
 
+<h2 id="5-프로젝트-팀원-소개">5. 프로젝트 팀원 소개</h2>
 
-<!--Url for Badges-->
-[license-shield]: https://img.shields.io/github/license/dev-ujin/readme-template?labelColor=D8D8D8&color=04B4AE
-[repository-size-shield]: https://img.shields.io/github/repo-size/dev-ujin/readme-template?labelColor=D8D8D8&color=BE81F7
-[issue-closed-shield]: https://img.shields.io/github/issues-closed/dev-ujin/readme-template?labelColor=D8D8D8&color=FE9A2E
-
-<!--Url for Buttons-->
-[readme-eng-shield]: https://img.shields.io/badge/-readme%20in%20english-2E2E2E?style=for-the-badge
-[view-demo-shield]: https://img.shields.io/badge/-%F0%9F%98%8E%20view%20demo-F3F781?style=for-the-badge
-[view-demo-url]: https://dev-ujin.github.io
-[report-bug-shield]: https://img.shields.io/badge/-%F0%9F%90%9E%20report%20bug-F5A9A9?style=for-the-badge
-[report-bug-url]: https://github.com/dev-ujin/readme-template/issues
-[request-feature-shield]: https://img.shields.io/badge/-%E2%9C%A8%20request%20feature-A9D0F5?style=for-the-badge
-[request-feature-url]: https://github.com/dev-ujin/readme-template/issues
-
-<!--URLS-->
-[license-url]: LICENSE.md
-[contribution-url]: CONTRIBUTION.md
-[readme-eng-url]: ../README.md
+| 이름   | 개발 도메인      | 개발 기능 |
+| ------ | ---------------- | --------- |
+| 양석진 | AI 트레이닝 <br> 회원 <br> 트레이닝 클래스 | - 모션캡쳐 AI 모델 연동 (Teachable Machine) <br> - AI 트레이닝 모델 학습 <br> - AI 트레이닝 진행 로직 <br> - AI 트레이닝 페이지 <br> - 월간 경험치 조회 API <br> - 내 예약 API <br> - 마이페이지 API <br> - 트레이너 리스트 조회, 필터링 |
+| 김진우 | 시스템설계 <br> 회원 <br> AI 트레이닝 <br> 백오피스 | - DB 설계 <br> - 마이페이지, 성향파악 페이지 <br> - 내 예약 페이지 <br> - 포인트/경험치 조회 페이지 <br> - 트레이닝 프로그램 리스트, 상세 <br> - 트레이닝, 트레이닝 프로그램 <br> - 피드백 작성 보조 AI (Chat GPT, FastAPI) |
+| 이지호 | 트레이닝 클래스 <br> 회원 <br> 백오피스 | - Web RTC 화상트레이닝 (OpenVidu) <br> - 로그인 <br> - 인증 및 보안 (Spring Security, JWT) <br> - 포인트/경험치 생성 API <br> - 트레이닝 히스토리 API <br> - 월간 트레이닝 피드백 <br> - 트레이닝 클래스 예약 관리 <br> - 트레이닝 피드백 작성 |
+| 최승렬 | 인프라 <br> 메인 <br> 트레이닝 클래스 <br> AI 트레이닝 | - 인프라 아키텍쳐 (AWS, On-Premis) <br> - CI/CD (Jenkins) <br> - 정적 콘텐츠 서버 (FastAPI) <br> - 메인 <br> - 트레이닝 프로그램 추천 알고리즘 <br> - 트레이너 상세, 클래스 예약 <br> - AI 트레이닝 리포트 <br> - 모션 판정 로직 |
