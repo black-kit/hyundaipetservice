@@ -41,85 +41,75 @@
 
 ---
 ### 1-1) 프로젝트 주제
-‘Hyunfit’은 건강의 중요성을 인식하고 있지만 건강 관리를 하지 못하고 있는 임직원들을 위해, 회사에서 건강한 사내 운동 문화를 만들어 임직원들의 건강 관리에 도움을 주는 사내 헬스케어 웹 서비스이다. 
+“ThePet”은 수요가 커지는 반려동물 시장에 맞춰서 반려동물을 좋아하는 고객이 백화점에 존재하는 반려 시설을 더욱 편리하게 이용할 수 있게 만든 반려 시설 예약 서비스 플랫폼이다. 
 
 ### 1-2) 서비스 개요 및 배경
-다수의 직장인들은 운동을 하고 싶지만 어떻게 시작해야 할지 모르고 시간적 여유가 부족한 경우가 많다. 이에 ‘Hyunfit’은 집에서도 편리하게 운동을 시작할 수 있도록 홈 트레이닝 환경을 제공하여 시간적 여유가 없는 직장인들에게 도움을 준다. AI 모션 인식 기술을 활용하여 사용자의 운동 자세를 교정하고, 화상 채팅 클래스와 전문가의 지도를 통해 더 나은 운동 경험을 제공한다. 또한 운동 기록을 분석한 리포트를 제공하여 사용자의 운동 성과에 대해서 가시적으로 확인할 수 있으며, 시간을 효과적으로 활용할 수 있게 지원한다.
+예약 서비스 플랫폼은 강아지를 맡기고 쇼핑을 할 수 있는 케어 서비스, 강아지와 함께 즐길 수 있는 공간을 제공해 주는 놀이터 서비스, 강아지의 미용과 스파를 진행할 수 있는 미용 서비스 시설을 예약할 수 있다. 해당 서비스를 예약하면 예약자에게 문자로 알림 서비스를 제공하고 예약 시간 10분 전에 알림 서비스를 제공해 준다.
+또한 해당 서비스는 관리자가 반려 시설에 대한 매출에 해당하는 데이터를 더욱 간편하게 확인할 수 있도록 월별, 일별 매출, 이용 건수를 확인할 수 있다. 그리고 사용자가 작성한 리뷰를 관리함으로써 시설물에 대한 관리를 용이하게 할 수 있는 서비스를 제공한다.
+
 
 ### 1-3) 서비스 목표
-‘Hyunfit’을 통해서 사내에서 임직원들이 건강한 라이프 스타일을 추구할 수 있도록 환경을 제공할 수 있게 도와주는 웹 서비스이다
+고객들이 반려 시설 예약 서비스를 통해 더 자주 백화점을 방문하고, 백화점을 이용하는 시간을 늘려 백화점의 이익에 기여하는 것이고 관리자는 기능을 통해서. 반려견을 동반할 수 있는 백화점 시설을 제공함으로써 우리는 고객들에게 편의성과 쾌적한 쇼핑 경험을 제공할 것이다.
 
-* 주 사용자 : 사내 임직원, 사내 관리자, 헬스 트레이너
+* 주 사용자 : 백화점 사용자, 백화점 관리자
 
 <h2 id="2-서비스-기능-소개">2. 서비스 기능 소개</h2>
 
 ---
 
 ### 2-1) 메인 기능
-* AI 트레이닝
-  * '테스트 - 워밍업 - 가이드 - 본 운동 - 종료' 5단계로 트레이닝 구성
-  * 테스트: 자세를 제대로 인식할 수 있게 조정하는 단계
-  * 워밍업: 본 운동이 들어가기 전에 스스로 카메라를 보며 몸을 풀 수 있는 단계
-  * 가이드: 이번 운동의 자세가 미리 나오면서 사용자들이 자세를 익힐 수 있게 도움을 주는 단계
-  * 본 운동: 운동을 실제로 진행하며, 제대로 된 자세로 진행할 때마다 갯수가 올라간다. 자세가 올바르지 않으며 갯수가 올라가지 않는다.
-  * 종료: 모든 운동이 끝나고 나서 메인 화면, 리포트 화면으로 갈 수 있게 해주는 화면이 나온다.
-* 트레이너와 화상 클래스
-  * 먼저 트레이너가 예약된 클래스에 세션을 열면, 화상 클래스가 시작된다.
-  * 세션이 열리면 사용자가 들어가서 트레이너와 같이 화상 클래스를 진행한다.
-* GPT를 활용한 트레이너 피드백 작성
-  * 지금까지 회원의 특징, 자세와 같은 특징들을 템플릿화하여 GPT에게 초안을 작성하게 만든다.
-  * 트레이너가 많은 사용자들의 피드백 관리를 보다 용이하게 관리할 수록 돕는다.
+* 일반 사용자
+  * 회원 가입을 통해 로그인한다.
+  * 오프라인 시설을 선택하여 예약을 한다.
+    * 케어, 놀이터, 미용 서비스 중 하나를 택한다.
+    * 날짜, 시간을 선택한다.
+  * 예약 완료, 예약 시간 10분 전, 예약 취소 시 예약자에게 SMS 알림이 간다. 
+    
+* 관리자 사용자
+  * 지점 예약 현황, 달 예약 현황, 일 예약 현황을 확인할 수 있다(매출, 이용자, 이용 반려동물, 예약 건수).
+  * 사용자의 리뷰 전체 관리 및 확인을 할 수 있다.
+  * 사용자의 리뷰에 답변할 수 있다.
 
-### 2-2) 서브 기능
-* 사용자 설문 조사
-  * 사용자의 운동 성향을 미리 파악할 수 있다.
-  * 해당 설문 조사 결과를 토대로 메인 화면에 적합한 운동 클래스를 추천해준다.
-* 트레이닝 프로그램 등록 및 진행
-  * 트레이닝 클래스를 이름을 통해 검색할 수 있으며 클릭 시, 상세 정보를 확인할 수 있다.
-  * 트레이너가 본인 회원을 위해 클래스를 직접 만들어서 등록할 수 있다.
-* 트레이닝 클래스 사용
-  * 트레이너를 검색하고 확인할 수 있다.
-  * 클래스 종류, 트레이너 성별, 추천 순, 평점 순, 리뷰 많은 순으로 필터링할 수 있다.
-  * 클래스를 시간별로 예약할 수 있다.
-  * 화상 클래스 종료 후, 수업에 대한 리뷰를 남길 수 있다.
-* 리포트 페이지
-  * AI 트레이닝을 통해 진행한 운동에 대해서 리포트를 확인할 수 있다.
-  * 칼로리, 출석, 소모시간 등을 확인할 수 있다.
-  * 어떤 부위를 집중적으로 진행했는지 그래프를 통해 가시적으로 확인할 수 있다.
  
-
-
-### 2-3) 관련 문서
-- 와이어프레임
-  [Hyunfit 피그마](https://www.figma.com/file/b4NubgulfrQrZIOLGjORIF/main?type=design&mode=design&t=caeUlW5rehL6syGF-0)
 
 <h2 id="3-사용된-데이터셋과-기술스택">3. 사용된 데이터셋과 기술스택</h2>
 
 ### 3-1) ERD
+![erd](https://github.com/user-attachments/assets/1ace59fc-a2a0-4ce7-81ae-9d7b8ce14e85)
+
+### 3-2) 개발 일정
+![개발 일정](https://github.com/user-attachments/assets/849f6dc7-267c-4554-b855-358fb1bbb18d)
+
+<h2 id="4-사용된-데이터셋과-기술스택">4. 사용된 데이터셋과 기술스택</h2>
+
+### 4-1) ERD
 ![erd](https://github.com/user-attachments/assets/6d06a76a-8c4b-44b7-87d3-261c0d5942db)
 
-### 3-2) 기술 스택
+### 4-2) 기술 스택
 
 | 파트                         | 기술                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Team** :metal:             | ![image](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) ![image](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white) ![image](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white) ![image](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) ![image](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)                                                                                                                                                                                                                                                                                                                                                         |
-| **FE** :ok_hand:             | ![image](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white) ![image](https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=white) ![image](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white) ![image](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white) |
-| **BE** :raised_back_of_hand: | ![image](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white) ![image](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white) |
-| **DB** :raised_back_of_hand: | ![image](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)|
-| **DIST** :raised_back_of_hand: | ![image](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![image](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white) ![image](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white) |
+| **Team** :metal:             | ![image](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white) ![image](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white) ![image](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white) ![image](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)                                                                                                                                                                                                                                                                                                                                                         |
+| **Frontend** :ok_hand:             | ![image](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![image](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![image](https://img.shields.io/badge/jsp-007396?style=for-the-badge&logo=java&logoColor=white) |
+| **Backend** :raised_back_of_hand: | ![image](https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white) ![image](https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) |
+| **Database** :raised_back_of_hand: | ![image](https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white) |
+| **Tool** :metal: | ![image](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white) ![image](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white) ![image](https://img.shields.io/badge/UML-007396?style=for-the-badge&logo=uml&logoColor=white) ![image](https://img.shields.io/badge/word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white) ![image](https://img.shields.io/badge/powerpoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white) ![image](https://img.shields.io/badge/notion-000000?style=for-the-badge&logo=notion&logoColor=white) |
 
 
 
 <h2 id="4-시스템-아키텍쳐">4. 시스템 아키텍쳐</h2>
 
 ### 4-1) 개발 구조
-![image](https://github.com/user-attachments/assets/ab473883-cf72-4f76-aa6c-d8793007a020)
+![image](https://github.com/user-attachments/assets/f1e616bf-1b63-4c19-8f4f-3b4326c750c8)
 
 <h2 id="5-프로젝트-팀원-소개">5. 프로젝트 팀원 소개</h2>
 
-| 이름   | 개발 도메인      | 개발 기능 |
-| ------ | ---------------- | --------- |
-| 양석진 | AI 트레이닝 <br> 회원 <br> 트레이닝 클래스 | - 모션캡쳐 AI 모델 연동 (Teachable Machine) <br> - AI 트레이닝 모델 학습 <br> - AI 트레이닝 진행 로직 <br> - AI 트레이닝 페이지 <br> - 월간 경험치 조회 API <br> - 내 예약 API <br> - 마이페이지 API <br> - 트레이너 리스트 조회, 필터링 |
-| 김진우 | 시스템설계 <br> 회원 <br> AI 트레이닝 <br> 백오피스 | - DB 설계 <br> - 마이페이지, 성향파악 페이지 <br> - 내 예약 페이지 <br> - 포인트/경험치 조회 페이지 <br> - 트레이닝 프로그램 리스트, 상세 <br> - 트레이닝, 트레이닝 프로그램 <br> - 피드백 작성 보조 AI (Chat GPT, FastAPI) |
-| 이지호 | 트레이닝 클래스 <br> 회원 <br> 백오피스 | - Web RTC 화상트레이닝 (OpenVidu) <br> - 로그인 <br> - 인증 및 보안 (Spring Security, JWT) <br> - 포인트/경험치 생성 API <br> - 트레이닝 히스토리 API <br> - 월간 트레이닝 피드백 <br> - 트레이닝 클래스 예약 관리 <br> - 트레이닝 피드백 작성 |
-| 최승렬 | 인프라 <br> 메인 <br> 트레이닝 클래스 <br> AI 트레이닝 | - 인프라 아키텍쳐 (AWS, On-Premis) <br> - CI/CD (Jenkins) <br> - 정적 콘텐츠 서버 (FastAPI) <br> - 메인 <br> - 트레이닝 프로그램 추천 알고리즘 <br> - 트레이너 상세, 클래스 예약 <br> - AI 트레이닝 리포트 <br> - 모션 판정 로직 |
+<h2 id="5-프로젝트-팀원-소개">5. 프로젝트 팀원 소개</h2>
+
+| 이름   | 개발 기능 | 산출물 |
+| ------ | --------- | ------ |
+| 양석진 | 로그인, 회원가입, 관리자 예약 관리 | 프로젝트 기획서, 프로젝트 발표 자료, ERD |
+| 박보선 | 예약 페이지, 메인 페이지 구성 | 시연 영상, ERD |
+| 홍승아 | 알림 기능, 관리자 리뷰 관리 | 스토리보드, ERD |
+| 조재룡 | 사용자 리뷰 관리 | 스토리보드, ERD |
+
