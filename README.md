@@ -102,7 +102,6 @@
 ### 4-1) 개발 구조
 ![image](https://github.com/user-attachments/assets/f1e616bf-1b63-4c19-8f4f-3b4326c750c8)
 
-<h2 id="5-프로젝트-팀원-소개">5. 프로젝트 팀원 소개</h2>
 
 <h2 id="5-프로젝트-팀원-소개">5. 프로젝트 팀원 소개</h2>
 
